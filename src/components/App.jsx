@@ -1,6 +1,6 @@
-import { Section } from './Section/Section';
-
- export const App = () => {
+import  Section  from './Section/Section';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+ const  App  = () => {
   return (
     <div
       // style={{
@@ -12,7 +12,11 @@ import { Section } from './Section/Section';
       //   color: '#010101'
       // }}
     >
-     <Section title = 'Please leave feedback'/>
+      <Section title='Please leave feedback' />
+      <FeedbackOptions/>
+    
+     
     </div>
   );
 };
+export default App;
