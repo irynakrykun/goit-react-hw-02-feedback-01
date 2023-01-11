@@ -1,0 +1,16 @@
+.statistics {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  flex-direction: column;
+}
+.statistics__good,
+.statistics__bad,
+.statistics__neutral,
+.statistics__total,
+.statistics__PF {
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  color: black;
+}
