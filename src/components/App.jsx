@@ -6,16 +6,16 @@ import Notification from './Notification/Notification';
 
 class App extends Component {
   static defaultProps = {
-    feedbackTypes: ['good', 'neutral', 'bad'],
+    feedback: ['good', 'neutral', 'bad'],
   };
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
-  onLeaveFeedback = feedbackType => {
+  onLeaveFeedback = feedback => {
     this.setState(prevState => ({
-      [feedbackType]: prevState[feedbackType] + 1,
+      [feedback]: prevState[feedback] + 1,
     }));
   };
 
@@ -32,13 +32,13 @@ class App extends Component {
   };
 
   render() {
-    const { feedbackTypes } = this.props;
+   
     const { good, neutral, bad } = this.state;
     return (
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={feedbackTypes}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback}
           ></FeedbackOptions>
         </Section>
